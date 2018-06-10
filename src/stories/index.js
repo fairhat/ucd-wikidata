@@ -4,9 +4,13 @@ import { storiesOf } from "@storybook/react";
 import { action } from "@storybook/addon-actions";
 import { withKnobs, text, boolean, number } from '@storybook/addon-knobs/react';
 import DataSnippet from "../components/DataSnippet/";
+import SnippetTip from "../components/SnippetTip/";
 import SnippetList from "../components/SnippetList/";
 import DraggableSnippet from "../components/DraggableSnippet/";
 import { defaultList } from "../components/SnippetList/example-data";
+import HelpComponent from "../components/HelpComponent";
+import WikiEditor from "../components/WikiEditor";
+import { color } from "@storybook/addon-knobs/dist/react";
 
 const editableList = defaultList.map((entry, i) => ({
   label: text(`label ${i}`, entry.label),
@@ -19,7 +23,11 @@ const Center = ({ children }) => (
   </div>
 );
 
+
 const DataSnippetStories = storiesOf("DataSnippet", module);
+const SnippetTipStories = storiesOf("SnippetTip", module);
+const HelpComponentStories = storiesOf("HelpComponent",module)
+const WikiEditorStories = storiesOf("WikiEditor",module)
 
 DataSnippetStories.addDecorator(withKnobs);
 
@@ -33,3 +41,28 @@ DataSnippetStories
     <SnippetList entries={editableList} />
   ))
   .add("draggable", () => (<DraggableSnippet id="1" />))
+
+  SnippetTipStories
+  .add("first", () => (
+    <SnippetTip label={text("Label", "label")} />
+  ))
+
+  HelpComponentStories
+  .add("first", () => (
+    <div style={{position:"fixed", right:"10px", top:"10px"}}>
+      <HelpComponent />
+    </div>
+  ))
+
+  WikiEditorStories
+  .add("first", () => (
+    <div>
+      <WikiEditor />
+      <div style={{position:"fixed" , right:"5px", top:"60px"}}>
+        <HelpComponent />
+      </div>
+    </div>
+  ))
+
+  
+ 
