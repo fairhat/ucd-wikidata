@@ -1,0 +1,29 @@
+.grabbable-el {
+  cursor: move;
+}
+
+.label {
+  user-select: none;
+}
+
+.stack-lower {
+  position: absolute;
+}
+
+.stack-lower button {
+  cursor: default !important;
+}
+
+.stack-lower.first {
+  top: 3px;
+  transform: translateX(2px);
+}
+
+.stack-lower.second {
+  top: 5px;
+  transform: translateX(4px);
+}
+
+.stack-upper {
+  position: absolute;
+}
