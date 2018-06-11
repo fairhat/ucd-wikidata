@@ -20,7 +20,7 @@ export default class SnippetList extends React.Component {
 
   render() {
     return (
-      <Row type="flex" justify="center">
+      <Row type="flex" justify="left">
         {this.props.entries.map((entry, i) =>
           <Col lg={3} md={7}>
             <DataSnippet

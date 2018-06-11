@@ -55,12 +55,9 @@ DataSnippetStories
   ))
 
   WikiEditorStories
-  .add("first", () => (
+  .add("editor", () => (
     <div>
       <WikiEditor />
-      <div style={{position:"fixed" , right:"5px", top:"60px"}}>
-        <HelpComponent />
-      </div>
     </div>
   ))
 
