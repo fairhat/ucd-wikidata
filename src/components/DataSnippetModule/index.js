@@ -36,7 +36,7 @@ export default class DataSnippetModule extends React.Component {
         {interpolatingStyle =>
           <div
             style={{
-              border: "1px solid #777",
+              border: interpolatingStyle.height < 1 ? "none" : "1px solid #777",
               background: "#ddd",
               overflowY: "hidden",
               ...interpolatingStyle
@@ -62,9 +62,9 @@ export default class DataSnippetModule extends React.Component {
                   data={dataSource}
                   first
                 />
-                <DataList type="alias" title="Aliases" data={dataSource} />
-                <DataList type="alias" title="Aliases" data={dataSource} />
-                <DataList type="alias" title="Aliases" data={dataSource} />
+                <DataList type="alias" title="Other names" data={dataSource} />
+                <DataList type="alias" title="Synonyms" data={dataSource} />
+                <DataList type="alias" title="Also known as" data={dataSource} />
                 <DataList type="alias" title="Aliases" data={dataSource} />
                 <DataList type="alias" title="Aliases" data={dataSource} />
                 <DataList type="alias" title="Aliases" data={dataSource} />
