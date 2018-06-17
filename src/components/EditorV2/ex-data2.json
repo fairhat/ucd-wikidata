@@ -1,0 +1,88 @@
+{
+  "QID" : "Q2",
+  "name": "Earth",
+  "lang": "de",
+  "aliases": [
+    "Blauer Planet",
+    "Erdkörper",
+    "Sol III",
+    "Welt",
+    "Sol 3",
+    "Die Erde"
+  ],
+  "statements": [
+    {
+      "label": "part of",
+      "values": [ "Earth-Moon System", "Solar System" ],
+      "dataType": "text"
+    },
+    {
+      "label": "part of",
+      "values": [ "Earth-Moon System", "Solar System" ],
+      "dataType": "text"
+    },
+    {
+      "label": "inception",
+      "values": [ "4540" ],
+      "unit": "million years BCE",
+      "dataType": "date"
+    },
+    {
+      "label": "named after",
+      "values": [ "soil" ],
+      "dataType": "text"
+    },
+    {
+      "label": "named after",
+      "values": [ "soil" ],
+      "dataType": "text"
+    },
+    {
+      "label": "north pole",
+      "values": [ "90°0'0.000\"N, 0°0'0.000\"E" ],
+      "dataType": "number"
+    },
+    {
+      "label": "highest point",
+      "values": [ "Mount Everest", "Chimborazo" ],
+      "dataType": "text"
+    },
+    {
+      "label": "deepest point",
+      "values": [ "Challenger Deep", "Galathea Depth", "Vityas Deep 1" ],
+      "dataType": "text"
+    },
+    {
+      "label": "follows",
+      "values": [ "Venus" ],
+      "dataType": "text"
+    },
+    {
+      "label": "followed by",
+      "values": [ "Mars" ],
+      "dataType": "text"
+    },
+    {
+      "label": "mass",
+      "values": [ "5972.37" ],
+      "unit": "yottagram",
+      "dataType": "number"
+    },
+    {
+      "label": "population",
+      "values": [ "7,530,103,737", "7,510,021,269",  ],
+      "dataType": "number"
+    },
+    {
+      "label": "studied by",
+      "values": [ "earth sciences" ],
+      "dataType": "text"
+    },
+    {
+      "label": "radius",
+      "values": [ "6,378.137" ],
+      "unit": "km",
+      "dataType": "number"
+    },
+  ]
+}

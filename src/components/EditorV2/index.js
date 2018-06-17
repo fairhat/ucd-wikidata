@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Layout, List } from "antd";
+import { Row, Col, Layout, List, Affix } from "antd";
 import Toolbar from "./Toolbar.js";
 import { Container, Draggable } from "react-smooth-dnd";
 import { DragDropContextProvider } from "react-dnd";
@@ -12,45 +12,14 @@ import {
   DragSourceMonitor,
   DragDropContext
 } from "react-dnd";
+import SnippetV2 from "../DataSnippetV2/";
+import DataSnippetModule from "../DataSnippetModule/";
+import _ from "lodash";
+import { Scrollbars } from "react-custom-scrollbars";
 // import { DragSource } from "react-dnd";
 import exampleWikidata from "./example-data.json";
 
 console.log(exampleWikidata);
-
-
-const itemSource = {
-	beginDrag(props) {
-		return {
-			value: props.value,
-		}
-	},
-
-	endDrag(props, monitor) {
-		const item = monitor.getItem()
-		const dropResult = monitor.getDropResult()
-
-		if (dropResult) {
-			alert(`You dropped ${item.value} into ${dropResult.value}!`)
-		}
-	},
-}
-
-// @DragSource(
-// 	ItemTypes.BOX,
-// 	boxSource,
-// 	(connect: DragSourceConnector, monitor: DragSourceMonitor) => ({
-// 		connectDragSource: connect.dragSource(),
-// 		isDragging: monitor.isDragging(),
-// 	}),
-// )
-
-const draggableItemSrc = ({ value }) => (
-  <List.Item>
-    {value}
-  </List.Item>
-);
-
-// const draggableItem = DragSource()
 
 class EditorV2 extends React.Component {
   state = {
@@ -69,6 +38,8 @@ class EditorV2 extends React.Component {
       type
     } = this.state.data;
 
+    // const stringClaims = claims.filter(claim => )
+
     return (
       <div style={{ padding: "20px" }}>
         <Row>
@@ -81,23 +52,8 @@ class EditorV2 extends React.Component {
           </Col>
           <Col span={21}>
             <Toolbar />
-            <Layout style={{ padding: "5px", minHeight: "250px" }}>
-              <Row>
-                <Col span={3}>
-                  <List
-                    bordered
-                    footer={<p style={{ textAlign: "center" }}>Aliases</p>}
-                    dataSource={aliases.de}
-                    renderItem={({ value }) =>
-                      <List.Item style={{ background: "white" }}>
-                        {value}
-                      </List.Item>}
-                  />
-                </Col>
-                <Col span={3} style={{ height: "100%" }}>
-                  <Container onDrop={() => {}} />
-                </Col>
-              </Row>
+            <Layout style={{ padding: "5px", width: "100%", }}>
+              <DataSnippetModule object={exampleWikidata} />
             </Layout>
           </Col>
         </Row>
@@ -106,4 +62,4 @@ class EditorV2 extends React.Component {
   }
 }
 
-export default DragDropContext(HTML5Backend)(EditorV2)
+export default DragDropContext(HTML5Backend)(EditorV2);
