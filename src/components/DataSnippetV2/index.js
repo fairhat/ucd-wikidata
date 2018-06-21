@@ -93,7 +93,7 @@ class Snippet extends Component {
         onMouseLeave={this.mouseLeave}
       >
         {this.props.label &&
-          <p style={{ color: "#aaa", marginBottom: "0" }}>
+          <p style={{ color: "#aaa", marginBottom: "0", marginLeft: "25px", }}>
             {this.props.label}
           </p>}
           { !this.props.direct && <Tooltip title={multiValueTooltip}>
@@ -118,7 +118,7 @@ class Snippet extends Component {
             </Popover>
           </Tooltip>}
         {connectDragPreview(
-          <div style={{ width: "100%"}}>
+          <div style={{ width: "calc(100% - 25px)", marginLeft: "25px" }}>
             {
               isImage && <span>
                 {!this.props.direct && <img src={mainVal} width="200" />}
@@ -142,7 +142,7 @@ class Snippet extends Component {
           <img
             src={dragIcon}
             width="35"
-            style={{ position: "absolute", right: 0, bottom: 3 }}
+            style={{ position: "absolute", left: 0, bottom: 8 }}
           />}
       </div>
     );
