@@ -27,6 +27,7 @@ export default class DataList extends React.Component {
     const leftMargin = this.props.first ? {} : {
       marginLeft: "10px"
     };
+    const { direct } = this.props;
 
     const orderedData = this.props.data;
 
@@ -40,14 +41,15 @@ export default class DataList extends React.Component {
             height: "20px",
             marginBottom: "0",
             borderTopRadius: "25px",
-            borderTop: "3px solid white"
+            borderTop: "3px solid white",
+            borderBottom: direct ? "2px solid #ccc" : "none",
           }}
         >
           {this.props.title}
         </span>
         <Scrollbars style={{ height: "290px", width: "350px", border: "3px solid white" }} autoHide hideTracksWhenNotNeeded>
-          {!this.props.direct && orderedData.map(item => <SnippetV2 label={item.label} values={item.values} />)}
-          {this.props.direct && this.props.data.map(item => <SnippetV2 label={item.label} values={[item.value]} direct />)}
+          {!direct && orderedData.map(item => <SnippetV2 label={item.label} values={item.values} />)}
+          {direct && this.props.data.map(item => <SnippetV2 label={item.label} values={[item.value]} direct />)}
           <div style={{ background: "white", height: "20px" }} />
         </Scrollbars>
       </div>

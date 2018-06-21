@@ -58,7 +58,8 @@ class Snippet extends Component {
       isDragging,
       connectDragSource,
       connectDragPreview,
-      src
+      src,
+      direct
     } = this.props;
 
     const multiValueTooltip = this.props.values.length > 1 ? 
@@ -67,13 +68,14 @@ class Snippet extends Component {
 
     const mainVal = this.props.direct ? this.props.values[0] : this.props.values[0].value;
     let isImage = false;
+    let isAudio = false;
 
-    if (this.props.direct && this.props.values[0].indexOf(".jpg") !== -1) {
+    if (mainVal.indexOf(".jpg") !== -1 || mainVal.indexOf(".svg") !== -1) {
       isImage = true;
     }
 
-    if (!this.props.direct && this.props.values[0].value.indexOf(".jpg") !== -1) {
-      isImage = true;
+    if (mainVal.indexOf(".ogg") !== -1 || mainVal.indexOf(".oga") !== -1) {
+      isAudio = true;
     }
 
     return connectDragSource(
@@ -82,7 +84,8 @@ class Snippet extends Component {
           padding: "5px",
           background: "white",
           cursor: "grab",
-          borderBottom: "2px solid #ddd",
+          borderBottom: "1px solid #ddd",
+          borderTop: "1px solid #ddd",
           position: "relative",
           minHeight: "65px"
         }}
@@ -118,11 +121,18 @@ class Snippet extends Component {
           <div style={{ width: "100%"}}>
             {
               isImage && <span>
-                {!this.props.direct && <img src={this.props.values[0].value} width="200" />}
-                {this.props.direct && <img src={this.props.values[0]} width="200" />}
+                {!this.props.direct && <img src={mainVal} width="200" />}
+                {this.props.direct && <img src={mainVal} width="200" />}
               </span>
             }
-            { !isImage && <span>
+            {
+              isAudio &&  (
+              <audio controls>
+                <source src={mainVal} type="audio/ogg" />
+                  Your browser does not support the audio element.
+              </audio>)
+            }
+            { !isImage && !isAudio && <span>
               {!this.props.direct && <Tooltip title={this.props.values[0].label}>{this.props.values[0].value}</Tooltip>}
               {this.props.direct && this.props.values[0]}
             </span>}
