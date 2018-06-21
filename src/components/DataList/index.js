@@ -8,17 +8,19 @@ export default class DataList extends React.Component {
   static propTypes = {
     first: PropTypes.bool,
     type: PropTypes.string,
-    data: PropTypes.object,
+    data: PropTypes.array,
     title: PropTypes.string,
     lang: PropTypes.string,
+    direct: PropTypes.bool,
   }
 
   static defaultProps = {
     first: false,
     type: null,
-    data: {},
+    data: [],
     title: "-",
     lang: "de",
+    direct: false,
   }
 
   render() {
@@ -26,20 +28,17 @@ export default class DataList extends React.Component {
       marginLeft: "10px"
     };
 
-    const data = [];
-
-    if (this.props.type === "alias") {
-      this.props.data.aliases[this.props.lang].forEach(alias => data.push({
-        label: "alias",
-        value: alias.value
-      }))
-    }
-
-    if (this.props.type === "chronology") {
-    }
+    const orderedData = !this.props.direct && _.map(_.groupBy(this.props.data, "wdLabel"), d => {
+      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
+      
+      return ({
+        label: d[0].wdLabel,
+        values: values,
+      });
+    });
 
     return (
-      <div style={{ width: "150px", display: "inline-block", ...leftMargin }}>
+      <div style={{ width: "350px", display: "inline-block", ...leftMargin }}>
         <span
           style={{
             background: "white",
@@ -53,8 +52,9 @@ export default class DataList extends React.Component {
         >
           {this.props.title}
         </span>
-        <Scrollbars style={{ height: "290px", width: "150px", border: "3px solid white" }} autoHide hideTracksWhenNotNeeded>
-          {data.map(item => <SnippetV2 label={item.label} value={item.value} />)}
+        <Scrollbars style={{ height: "290px", width: "350px", border: "3px solid white" }} autoHide hideTracksWhenNotNeeded>
+          {!this.props.direct && orderedData.map(item => <SnippetV2 label={item.label} values={item.values} />)}
+          {this.props.direct && this.props.data.map(item => <SnippetV2 label={item.label} values={[item.value]} direct />)}
           <div style={{ background: "white", height: "20px" }} />
         </Scrollbars>
       </div>

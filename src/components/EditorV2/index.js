@@ -16,29 +16,45 @@ import SnippetV2 from "../DataSnippetV2/";
 import DataSnippetModule from "../DataSnippetModule/";
 import _ from "lodash";
 import { Scrollbars } from "react-custom-scrollbars";
+// import _ from "lodash";
 // import { DragSource } from "react-dnd";
 import exampleWikidata from "./example-data.json";
+import exampleData from "./query-2.json";
 
-console.log(exampleWikidata);
+console.log(exampleData);
+// console.log(exampleWikidata);
+
+function isValidURL(str) {
+  var a  = document.createElement('a');
+  a.href = str;
+  return (a.host && a.host != window.location.host);
+}
 
 class EditorV2 extends React.Component {
   state = {
-    data: exampleWikidata.entities.Q2
+    data: exampleData
   };
 
   render() {
-    const {
-      aliases,
-      claims,
-      descriptions,
-      id,
-      labels,
-      sitelinks,
-      title,
-      type
-    } = this.state.data;
+    // const aliases = _.filter(exampleData, a => a.wdLabel === "alias");
+    const numeric = _.filter(exampleData, a => !isNaN(a.ps_Label));
+    const urls = _.filter(exampleData, a => isValidURL(a.ps_Label));
+    const strs = _.filter(exampleData, a => isNaN(a.ps_Label) && !isValidURL(a.ps_Label));
 
-    // const stringClaims = claims.filter(claim => )
+    const dataP = [
+      {
+        label: "Text",
+        data: strs,
+      },
+      {
+        label: "Media",
+        data: urls,
+      },
+      {
+        label: "Numerisch",
+        data: numeric
+      },
+    ]
 
     return (
       <div style={{ padding: "20px" }}>
@@ -53,7 +69,8 @@ class EditorV2 extends React.Component {
           <Col span={21}>
             <Toolbar />
             <Layout style={{ padding: "5px", width: "100%", }}>
-              <DataSnippetModule object={exampleWikidata} />
+              <DataSnippetModule data={dataP} />
+              <textarea style={{ width: "100%", marginTop: "10px" }} rows="15" />
             </Layout>
           </Col>
         </Row>

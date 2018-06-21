@@ -1,0 +1,889 @@
+[
+  { "wdLabel": "alias", "ps_Label": "Blauer Planet", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "Erdk\u00f6rper", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "Sol III", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "\u2641", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "\u2295", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "Sol 3", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "Welt" },
+  { "wdLabel": "alias", "ps_Label": "\ud83c\udf0e", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "\ud83c\udf0d", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "\ud83c\udf0f", "pqLabel": "Synonym" },
+  { "wdLabel": "alias", "ps_Label": "Die Erde", "pqLabel": "Synonym" },
+  { "wdLabel": "benannt nach", "ps_Label": "Boden" },
+  {
+    "wdLabel": "Vorgänger",
+    "ps_Label": "Venus",
+    "wdpqLabel": "Serie",
+    "pq_Label": "Sonnensystem"
+  },
+  {
+    "wdLabel": "Nachfolger",
+    "ps_Label": "Mars",
+    "wdpqLabel": "Serie",
+    "pq_Label": "Sonnensystem"
+  },
+  {
+    "wdLabel": "Bild",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Earth%20seen%20from%20Apollo%2017.jpg",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1972-12-07T00:00:00Z"
+  },
+  {
+    "wdLabel": "Bild",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Earth%20seen%20from%20Apollo%2017.jpg",
+    "wdpqLabel": "Beschreibung Medium",
+    "pq_Label": "The Blue Marble"
+  },
+  {
+    "wdLabel": "Bild",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/The%20Earth%20seen%20from%20Apollo%2017.jpg",
+    "wdpqLabel": "Beschreibung Medium",
+    "pq_Label": "الگُلَّة (البلية) الزرقاء"
+  },
+  { "wdLabel": "VIAF", "ps_Label": "6270149919445006650001" },
+  { "wdLabel": "GND", "ps_Label": "1135962553" },
+  { "wdLabel": "LCAuth", "ps_Label": "sh85040427" },
+  { "wdLabel": "ist ein(e)", "ps_Label": "Innerer Planet" },
+  { "wdLabel": "Dewey-Dezimalklassifikation", "ps_Label": "910.02" },
+  { "wdLabel": "Dewey-Dezimalklassifikation", "ps_Label": "525" },
+  { "wdLabel": "Dewey-Dezimalklassifikation", "ps_Label": "550" },
+  { "wdLabel": "PSH-ID", "ps_Label": "3769" },
+  { "wdLabel": "PSH-ID", "ps_Label": "499" },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "5263593000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1990-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7000000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2012-02-20T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7475406776",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2017-01-05T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "5000000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1987-07-07T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "4000000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1974-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "4830979000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1985-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "3021475000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1960-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "400000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1000-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "2755823000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1955-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7510021269",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2017-06-07T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "5674380000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1995-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "-4000-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7202951000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2013-12-31T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "6343628000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2005-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "6800000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2010-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "285000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "0001-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "1000000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1810-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "3692492000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1970-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "4068109000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1975-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "50000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "-1000-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "2000000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1927-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7359044782",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2015-08-12T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "1500000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1893-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "3334874000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1965-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "4434682000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1980-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "1650000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1900-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "2518629000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1950-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7463786469",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2016-11-12T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7000000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2011-10-31T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "6000000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1999-10-12T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7392793000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2016-01-05T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "1262000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1850-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "7530103737",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2017-09-05T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "100000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "-500-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "6070581000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2000-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Einwohnerzahl",
+    "ps_Label": "791000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1750-01-01T00:00:00Z"
+  },
+  { "wdLabel": "Exzentrizität", "ps_Label": "0.01671123" },
+  { "wdLabel": "Exzentrizität", "ps_Label": "0.016710219" },
+  { "wdLabel": "Abplattung", "ps_Label": "0.0033528" },
+  { "wdLabel": "NARA-ID", "ps_Label": "10046628" },
+  { "wdLabel": "NARA-ID", "ps_Label": "10637787" },
+  { "wdLabel": "Definition in OmegaWiki", "ps_Label": "7401" },
+  { "wdLabel": "WOEID", "ps_Label": "1" },
+  { "wdLabel": "Große katalanische Enzyklopädie ID", "ps_Label": "0145903" },
+  {
+    "wdLabel": "nördlichster Punkt",
+    "ps_Label": "Point(0.0 90.0)",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Nordpol"
+  },
+  {
+    "wdLabel": "südlichster Punkt",
+    "ps_Label": "Point(0.0 -90.0)",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Südpol"
+  },
+  {
+    "wdLabel": "beschrieben in",
+    "ps_Label": "Biblische Enzyklopädie des Archimandrit Nikifor",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Q24206694"
+  },
+  {
+    "wdLabel": "beschrieben in",
+    "ps_Label": "Q1970746",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Q24206672"
+  },
+  {
+    "wdLabel": "beschrieben in",
+    "ps_Label": "Ottos Enzyklopädie",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Q23859820"
+  },
+  {
+    "wdLabel": "beschrieben in",
+    "ps_Label": "Jüdische Enzyklopädie von Brockhaus und Efron",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Q24206696"
+  },
+  {
+    "wdLabel": "beschrieben in",
+    "ps_Label": "Enzyklopädisches Wörterbuch von Brockhaus-Efron",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Q24732074"
+  },
+  {
+    "wdLabel": "beschrieben in",
+    "ps_Label": "Brockhaus-Efron",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Q24206689"
+  },
+  { "wdLabel": "Encyclopædia Britannica Online-ID", "ps_Label": "place/Earth" },
+  {
+    "wdLabel": "Form",
+    "ps_Label": "Geoid",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Erdfigur"
+  },
+  {
+    "wdLabel": "Form",
+    "ps_Label": "Q838611",
+    "wdpqLabel": "Nachweisumstände",
+    "pq_Label": "Approximation"
+  },
+  {
+    "wdLabel": "Form",
+    "ps_Label": "Kreisscheibe",
+    "wdpqLabel": "Aussage gestützt durch",
+    "pq_Label": "Flat Earth Society"
+  },
+  {
+    "wdLabel": "Form",
+    "ps_Label": "Abgeplattetes Sphäroid",
+    "wdpqLabel": "Nachweisumstände",
+    "pq_Label": "Approximation"
+  },
+  { "wdLabel": "charakterisiert durch", "ps_Label": "Q25935139" },
+  { "wdLabel": "charakterisiert durch", "ps_Label": "Erdmagnetfeld" },
+  { "wdLabel": "charakterisiert durch", "ps_Label": "planetare Habilität" },
+  { "wdLabel": "Manifestation von", "ps_Label": "Offenes System" },
+  { "wdLabel": "GeoNames-ID", "ps_Label": "6295630" },
+  {
+    "wdLabel": "tiefster Punkt",
+    "ps_Label": "Witjastief 1",
+    "wdpqLabel": "Startzeitpunkt",
+    "pq_Label": "1957-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "tiefster Punkt",
+    "ps_Label": "Witjastief 1",
+    "wdpqLabel": "Höhe über dem Meeresspiegel",
+    "pq_Label": "-10950"
+  },
+  {
+    "wdLabel": "tiefster Punkt",
+    "ps_Label": "Galatheatief",
+    "wdpqLabel": "Endzeitpunkt",
+    "pq_Label": "1952-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "tiefster Punkt",
+    "ps_Label": "Galatheatief",
+    "wdpqLabel": "Höhe über dem Meeresspiegel",
+    "pq_Label": "-10540"
+  },
+  {
+    "wdLabel": "tiefster Punkt",
+    "ps_Label": "Challengertief",
+    "wdpqLabel": "Höhe über dem Meeresspiegel",
+    "pq_Label": "-10994"
+  },
+  {
+    "wdLabel": "BBC Things-ID",
+    "ps_Label": "dd8bc764-62f3-4f5f-837d-09aa2580f7b9"
+  },
+  { "wdLabel": "TGN-ID", "ps_Label": "7030638" },
+  { "wdLabel": "Name in Kana", "ps_Label": "ちきゅう" },
+  { "wdLabel": "verschieden von", "ps_Label": "Land" },
+  { "wdLabel": "verschieden von", "ps_Label": "Boden" },
+  { "wdLabel": "Bahnneigung", "ps_Label": "7.155" },
+  { "wdLabel": "Masse", "ps_Label": "5972.37" },
+  {
+    "wdLabel": "Radius",
+    "ps_Label": "6378.137",
+    "wdpqLabel": "betroffener Teil",
+    "pq_Label": "Äquator"
+  },
+  {
+    "wdLabel": "Radius",
+    "ps_Label": "6378.137",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Erdradius"
+  },
+  {
+    "wdLabel": "Radius",
+    "ps_Label": "6371",
+    "wdpqLabel": "betroffener Teil",
+    "pq_Label": "Mittelwert"
+  },
+  {
+    "wdLabel": "Radius",
+    "ps_Label": "6371",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Erdradius"
+  },
+  {
+    "wdLabel": "Radius",
+    "ps_Label": "6339.9",
+    "wdpqLabel": "Bild",
+    "pq_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/Abu%20Reyhan%20Biruni-Earth%20Circumference.svg"
+  },
+  {
+    "wdLabel": "Radius",
+    "ps_Label": "6339.9",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1000-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Radius",
+    "ps_Label": "6339.9",
+    "wdpqLabel": "Aussage gestützt durch",
+    "pq_Label": "al-Biruni"
+  },
+  { "wdLabel": "siderische Periode", "ps_Label": "365.256363004" },
+  { "wdLabel": "FAST ID", "ps_Label": "1860481" },
+  { "wdLabel": "Geschichte", "ps_Label": "Menschheitsgeschichte" },
+  { "wdLabel": "Geschichte", "ps_Label": "Erdgeschichte" },
+  { "wdLabel": "Länge des aufsteigenden Knotens", "ps_Label": "348.73936" },
+  { "wdLabel": "große Halbachse der Ellipse", "ps_Label": "1" },
+  { "wdLabel": "große Halbachse der Ellipse", "ps_Label": "149598023" },
+  { "wdLabel": "Volumen", "ps_Label": "1083210000000" },
+  { "wdLabel": "Apoapsis", "ps_Label": "1.00000261" },
+  {
+    "wdLabel": "Apoapsis",
+    "ps_Label": "151930000",
+    "wdpqLabel": "Bezugspunkt",
+    "pq_Label": "Sonne"
+  },
+  {
+    "wdLabel": "Periapsis",
+    "ps_Label": "147095000",
+    "wdpqLabel": "Bezugspunkt",
+    "pq_Label": "Sonne"
+  },
+  { "wdLabel": "Argument der Periapsis", "ps_Label": "114.20783" },
+  { "wdLabel": "mittlere Anomalie", "ps_Label": "358.617" },
+  { "wdLabel": "Durchmesser", "ps_Label": "12742" },
+  {
+    "wdLabel": "Umfang",
+    "ps_Label": "40075",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Äquator"
+  },
+  { "wdLabel": "Umfang", "ps_Label": "24901" },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "264000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "264000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2015-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "291000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "291000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2009-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "343000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "343000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2003-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "371000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "371000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2001-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "305000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "305000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2007-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "324000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "324000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2006-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "263000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "263000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2014-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "336000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "336000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2004-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "333000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "333000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2005-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "274000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "274000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2011-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "265000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2013-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "266000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "266000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2012-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "294000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "294000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2008-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "360000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "360000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2002-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "374000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "374000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2000-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "281000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "281000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "2010-01-01T00:00:00Z"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "379000000",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Q47005776"
+  },
+  {
+    "wdLabel": "Anzahl der Kinder ohne Zugang zu Schulbildung",
+    "ps_Label": "379000000",
+    "wdpqLabel": "Zeitpunkt/Stand",
+    "pq_Label": "1999-01-01T00:00:00Z"
+  },
+  { "wdLabel": "Forschungsthema in", "ps_Label": "Geowissenschaften" },
+  { "wdLabel": "BabelNet-ID", "ps_Label": "00029424n" },
+  { "wdLabel": "Geographie", "ps_Label": "Geographie" },
+  { "wdLabel": "besteht aus Elementen von", "ps_Label": "Kontinent" },
+  { "wdLabel": "BnF-ID", "ps_Label": "11975911n" },
+  { "wdLabel": "ID der Großen Russischen Enzyklopädie", "ps_Label": "2381210" },
+  { "wdLabel": "P2956", "ps_Label": "399" },
+  { "wdLabel": "dauerhaftes Duplikat von", "ps_Label": "Q22828183" },
+  { "wdLabel": "P3219", "ps_Label": "terre-la-planete-terre" },
+  { "wdLabel": "P3219", "ps_Label": "terre-vue-d-ensemble" },
+  {
+    "wdLabel": "Nationalencyklopedin Online ID (Schwedisch)",
+    "ps_Label": "jorden"
+  },
+  {
+    "wdLabel": "Nationalencyklopedin Online ID (Schwedisch)",
+    "ps_Label": "tellus"
+  },
+  { "wdLabel": "Quora-Themenkennung", "ps_Label": "Earth-planet" },
+  { "wdLabel": "Web NDL Authorities", "ps_Label": "00573040" },
+  {
+    "wdLabel": "Cultureel-Woordenboek-ID",
+    "ps_Label": "aarde-weer-en-klimaat/aarde"
+  },
+  { "wdLabel": "ist Teil von", "ps_Label": "Erde-Mond-System" },
+  { "wdLabel": "ist Teil von", "ps_Label": "Sonnensystem" },
+  {
+    "wdLabel": "astronomisches Symbol",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/Earth%20symbol.svg"
+  },
+  { "wdLabel": "Commons-Kategorie", "ps_Label": "Earth" },
+  { "wdLabel": "JSTOR-Themen-ID", "ps_Label": "earth" },
+  { "wdLabel": "UNESCO-Thesaurus-ID", "ps_Label": "concept4083" },
+  { "wdLabel": "übergeordneter astronomischer Körper", "ps_Label": "Sonne" },
+  {
+    "wdLabel": "untergeordnete astronomischer Körper",
+    "ps_Label": "Internationale Raumstation"
+  },
+  {
+    "wdLabel": "untergeordnete astronomischer Körper",
+    "ps_Label": "Transiting Exoplanet Survey Satellite"
+  },
+  { "wdLabel": "untergeordnete astronomischer Körper", "ps_Label": "Q3270674" },
+  { "wdLabel": "untergeordnete astronomischer Körper", "ps_Label": "Mond" },
+  { "wdLabel": "P4211", "ps_Label": "12728" },
+  { "wdLabel": "P4427", "ps_Label": "24817" },
+  {
+    "wdLabel": "Aussprache (Audiodatei)",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/De-Erde.ogg",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Deutsch"
+  },
+  {
+    "wdLabel": "Aussprache (Audiodatei)",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/It-Terra.oga",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Italienisch"
+  },
+  {
+    "wdLabel": "Aussprache (Audiodatei)",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/Ar-%D8%A7%D9%84%D8%A3%D8%B1%D8%B6.ogg",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Arabisch"
+  },
+  {
+    "wdLabel": "Aussprache (Audiodatei)",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/Ru-%D0%B7%D0%B5%D0%BC%D0%BB%D1%8F.ogg",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Russisch"
+  },
+  {
+    "wdLabel": "Aussprache (Audiodatei)",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/Fr-terre-ca-Montr%C3%A9al.ogg",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "kanadisches Französisch"
+  },
+  {
+    "wdLabel": "Aussprache (Audiodatei)",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/En-Earth.ogg",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Englisch"
+  },
+  { "wdLabel": "P4466", "ps_Label": "439" },
+  { "wdLabel": "eventuell gleichwertig", "ps_Label": "Welt" },
+  { "wdLabel": "P4613", "ps_Label": "15977" },
+  { "wdLabel": "P4839", "ps_Label": "Entity[\"Planet\", \"Earth\"]" },
+  { "wdLabel": "MeSH-ID", "ps_Label": "D018534" },
+  { "wdLabel": "Unicodezeichen", "ps_Label": "🌏" },
+  { "wdLabel": "Unicodezeichen", "ps_Label": "⊕" },
+  { "wdLabel": "Unicodezeichen", "ps_Label": "🌍" },
+  { "wdLabel": "Unicodezeichen", "ps_Label": "🌎" },
+  { "wdLabel": "Unicodezeichen", "ps_Label": "♁" },
+  {
+    "wdLabel": "3D-Modell",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/Earth%20dry%20elevation.stl"
+  },
+  {
+    "wdLabel": "3D-Modell",
+    "ps_Label": "http://commons.wikimedia.org/wiki/Special:FilePath/Earth.stl"
+  },
+  {
+    "wdLabel": "Arbeitsliste eines Wikimedia-Projektes",
+    "ps_Label": "Wikipedia:Liste von 1000 Artikeln, die es in jeder Wikipedia geben sollte"
+  },
+  { "wdLabel": "P5019", "ps_Label": "erde" },
+  { "wdLabel": "Römpp-Online-ID", "ps_Label": "RD-05-01501" },
+  { "wdLabel": "BNCF-Thesaurus", "ps_Label": "5175" },
+  { "wdLabel": "P5125", "ps_Label": "Q28231576" },
+  { "wdLabel": "Umlaufbahn", "ps_Label": "Erdbahn" },
+  { "wdLabel": "besteht aus", "ps_Label": "Biosphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "Erdmagnetfeld" },
+  { "wdLabel": "besteht aus", "ps_Label": "Erdkern" },
+  { "wdLabel": "besteht aus", "ps_Label": "Weltmeere" },
+  { "wdLabel": "besteht aus", "ps_Label": "Lithosphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "Südhalbkugel" },
+  { "wdLabel": "besteht aus", "ps_Label": "tektonische Platte" },
+  { "wdLabel": "besteht aus", "ps_Label": "Erdoberfläche" },
+  { "wdLabel": "besteht aus", "ps_Label": "Hydrosphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "Antarktis" },
+  { "wdLabel": "besteht aus", "ps_Label": "Nordhalbkugel" },
+  { "wdLabel": "besteht aus", "ps_Label": "westliche Hemisphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "Wasserhemisphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "Landhemisphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "östliche Hemisphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "Pangaea" },
+  { "wdLabel": "besteht aus", "ps_Label": "Erdatmosphäre" },
+  { "wdLabel": "besteht aus", "ps_Label": "Erdmantel" },
+  { "wdLabel": "besteht aus", "ps_Label": "Erdkruste" },
+  {
+    "wdLabel": "Katalognummer",
+    "ps_Label": "806.4616.0110",
+    "wdpqLabel": "Katalog",
+    "pq_Label": "Encyclopedia Galactica"
+  },
+  {
+    "wdLabel": "Gründung, Erstellung bzw. Entstehung",
+    "ps_Label": "-4540000000-01-01T00:00:00Z",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Blei-Blei-Datierung"
+  },
+  {
+    "wdLabel": "Gründung, Erstellung bzw. Entstehung",
+    "ps_Label": "-4540000000-01-01T00:00:00Z",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Entstehung der Erde"
+  },
+  {
+    "wdLabel": "Auflösungsdatum",
+    "ps_Label": "t1014275116",
+    "wdpqLabel": "beschreibendes Datenobjekt",
+    "pq_Label": "Zukunft der Erde"
+  },
+  {
+    "wdLabel": "höchster Punkt",
+    "ps_Label": "Mount Everest",
+    "wdpqLabel": "Staat",
+    "pq_Label": "Nepal"
+  },
+  {
+    "wdLabel": "höchster Punkt",
+    "ps_Label": "Mount Everest",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Meeresspiegel"
+  },
+  {
+    "wdLabel": "höchster Punkt",
+    "ps_Label": "Mount Everest",
+    "wdpqLabel": "betroffener Teil",
+    "pq_Label": "Erdoberfläche"
+  },
+  {
+    "wdLabel": "höchster Punkt",
+    "ps_Label": "Mount Everest",
+    "wdpqLabel": "Höhe über dem Meeresspiegel",
+    "pq_Label": "8848"
+  },
+  {
+    "wdLabel": "höchster Punkt",
+    "ps_Label": "Chimborazo",
+    "wdpqLabel": "Staat",
+    "pq_Label": "Ecuador"
+  },
+  {
+    "wdLabel": "höchster Punkt",
+    "ps_Label": "Chimborazo",
+    "wdpqLabel": "Bestimmungsmethode",
+    "pq_Label": "Liste geographischer Mittelpunkte"
+  },
+  {
+    "wdLabel": "höchster Punkt",
+    "ps_Label": "Chimborazo",
+    "wdpqLabel": "Länge",
+    "pq_Label": "6384.41598"
+  },
+  { "wdLabel": "Freebase-Kennung", "ps_Label": "/m/02j71" },
+  {
+    "wdLabel": "liegt geografisch im Gebiet oder Gewässer",
+    "ps_Label": "habitable Zone",
+    "wdpqLabel": "von",
+    "pq_Label": "Sonnensystem"
+  },
+  { "wdLabel": "Hauptkategorie zum Artikel", "ps_Label": "Kategorie:Erde" },
+  { "wdLabel": "Notation", "ps_Label": "♁" },
+  { "wdLabel": "Commons-Galerie", "ps_Label": "Earth" },
+  { "wdLabel": "NLI (Israel)", "ps_Label": "003982849" },
+  {
+    "wdLabel": "dmoz",
+    "ps_Label": "World/Deutsch/Wissenschaft/Naturwissenschaften/Astronomie/Sonnensystem/Planeten/Erde/",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Deutsch"
+  },
+  {
+    "wdLabel": "dmoz",
+    "ps_Label": "World/Español/Ciencia_y_tecnología/Astronomía/Sistema_Solar/Planetas/Tierra/",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Spanisch"
+  },
+  {
+    "wdLabel": "dmoz",
+    "ps_Label": "Science/Astronomy/Solar_System/Planets/Earth/",
+    "wdpqLabel": "Sprache des Werks, des Namens oder des Begriffes",
+    "pq_Label": "Englisch"
+  }
+]

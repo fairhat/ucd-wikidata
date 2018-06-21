@@ -2,6 +2,7 @@ import React from "react";
 import PropTypes from "prop-types";
 import { Scrollbars } from "react-custom-scrollbars";
 import DataList from "../DataList/";
+import { Spin } from "antd";
 import HelpComponent from "../HelpComponent/";
 import { Motion, spring } from "react-motion";
 
@@ -16,18 +17,18 @@ export default class DataSnippetModule extends React.Component {
   }
 
   render() {
-    const {
-      aliases,
-      claims,
-      descriptions,
-      id,
-      labels,
-      sitelinks,
-      title,
-      type
-    } = this.props.object.entities.Q2;
+    // const {
+    //   aliases,
+    //   claims,
+    //   descriptions,
+    //   id,
+    //   labels,
+    //   sitelinks,
+    //   title,
+    //   type
+    // } = this.props.object.entities.Q2;
 
-    const dataSource = this.props.object.entities.Q2;
+    // const dataSource = this.props.object.entities.Q2;
 
     return (
       <div>
@@ -36,13 +37,16 @@ export default class DataSnippetModule extends React.Component {
         {interpolatingStyle =>
           <div
             style={{
-              border: interpolatingStyle.height < 1 ? "none" : "1px solid #777",
+              border: "1px solid #777",
               background: "#ddd",
               overflowY: "hidden",
+              width: "100%",
               ...interpolatingStyle
             }}
           >
-            <Scrollbars
+            {
+              interpolatingStyle.height === 300 && (
+                <Scrollbars
               style={{ width: `100%`, height: "300px" }}
               hideTracksWhenNotNeeded
               onScrollFrame={({ scrollLeft, clientWidth }) =>
@@ -56,20 +60,15 @@ export default class DataSnippetModule extends React.Component {
                   overflowY: "hidden"
                 }}
               >
-                <DataList
-                  type="alias"
-                  title="Aliases"
-                  data={dataSource}
-                  first
-                />
-                <DataList type="alias" title="Other names" data={dataSource} />
-                <DataList type="alias" title="Synonyms" data={dataSource} />
-                <DataList type="alias" title="Also known as" data={dataSource} />
-                <DataList type="alias" title="Aliases" data={dataSource} />
-                <DataList type="alias" title="Aliases" data={dataSource} />
-                <DataList type="alias" title="Aliases" data={dataSource} />
-                <DataList type="alias" title="Aliases" data={dataSource} />
-                <DataList type="alias" title="Aliases" data={dataSource} />
+              {
+                this.props.data.map((d, i) => (
+                  <DataList
+                    title={d.label}
+                    data={d.data}
+                    first={i === 0}
+                    />
+                ))
+              }
               </div>
               <HelpComponent
                 style={{
@@ -79,6 +78,9 @@ export default class DataSnippetModule extends React.Component {
                 }}
               />
             </Scrollbars>
+              )
+            }
+            { interpolatingStyle.height < 300 && <Spin style={{ transform: "translate(50%, 50%)"}} />}
           </div>}
       </Motion>
       </div>
