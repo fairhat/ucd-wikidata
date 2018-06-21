@@ -28,14 +28,7 @@ export default class DataList extends React.Component {
       marginLeft: "10px"
     };
 
-    const orderedData = !this.props.direct && _.map(_.groupBy(this.props.data, "wdLabel"), d => {
-      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
-      
-      return ({
-        label: d[0].wdLabel,
-        values: values,
-      });
-    });
+    const orderedData = this.props.data;
 
     return (
       <div style={{ width: "350px", display: "inline-block", ...leftMargin }}>

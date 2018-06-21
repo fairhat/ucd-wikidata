@@ -41,18 +41,51 @@ class EditorV2 extends React.Component {
     const urls = _.filter(exampleData, a => isValidURL(a.ps_Label));
     const strs = _.filter(exampleData, a => isNaN(a.ps_Label) && !isValidURL(a.ps_Label));
 
+    const orderedNumeric = _.map(_.groupBy(numeric, "wdLabel"), d => {
+      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
+      
+      return ({
+        label: d[0].wdLabel,
+        values: values,
+      });
+    });
+    const orderedURLs = _.map(_.groupBy(urls, "wdLabel"), d => {
+      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
+      
+      return ({
+        label: d[0].wdLabel,
+        values: values,
+      });
+    });
+    const orderedStrs = _.map(_.groupBy(strs, "wdLabel"), d => {
+      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
+      
+      return ({
+        label: d[0].wdLabel,
+        values: values,
+      });
+    });
+
     const dataP = [
       {
         label: "Text",
-        data: strs,
+        data: orderedStrs,
       },
       {
         label: "Media",
-        data: urls,
+        data: orderedURLs,
       },
       {
         label: "Numerisch",
-        data: numeric
+        data: orderedNumeric
+      },
+      {
+        label: "Text",
+        data: orderedStrs,
+      },
+      {
+        label: "Text",
+        data: orderedStrs,
       },
     ]
 
