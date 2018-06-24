@@ -25,15 +25,28 @@ console.log(exampleData);
 // console.log(exampleWikidata);
 
 function isValidURL(str) {
-  var a  = document.createElement('a');
+  var a = document.createElement('a');
   a.href = str;
   return (a.host && a.host != window.location.host);
 }
 
 class EditorV2 extends React.Component {
   state = {
-    data: exampleData
-  };
+    data: exampleData,
+    text: ''
+    };
+    
+    SnippedDropped(event) {
+      var val = "Text aus Snippet" //event.dataTransfer.getData('id');
+      this.setState({ text: this.state.text + val });
+      //alert("The new content: " + val ); 
+    }
+    TextChanged(event) {
+      var val = this.refs.Text_area.value;
+      //alert("The new content: " + val);
+      this.setState({text: val})
+    }
+ 
 
   render() {
     // const aliases = _.filter(exampleData, a => a.wdLabel === "alias");
@@ -43,7 +56,7 @@ class EditorV2 extends React.Component {
 
     const orderedNumeric = _.map(_.groupBy(numeric, "wdLabel"), d => {
       const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
-      
+
       return ({
         label: d[0].wdLabel,
         values: values,
@@ -51,7 +64,7 @@ class EditorV2 extends React.Component {
     });
     const orderedURLs = _.map(_.groupBy(urls, "wdLabel"), d => {
       const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
-      
+
       return ({
         label: d[0].wdLabel,
         values: values,
@@ -59,7 +72,7 @@ class EditorV2 extends React.Component {
     });
     const orderedStrs = _.map(_.groupBy(strs, "wdLabel"), d => {
       const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
-      
+
       return ({
         label: d[0].wdLabel,
         values: values,
@@ -103,7 +116,14 @@ class EditorV2 extends React.Component {
             <Toolbar />
             <Layout style={{ padding: "5px", width: "100%", }}>
               <DataSnippetModule data={dataP} />
-              <textarea style={{ width: "100%", marginTop: "10px" }} rows="15" />
+              <textarea
+                ref = "Text_area"
+                style={{ width: "100%", marginTop: "10px" }} rows="15"
+                onDrop={this.SnippedDropped.bind(this)}
+                onInput={this.TextChanged.bind(this)}
+                placeholder='Text hier eingeben'
+                value={this.state.text}>
+              </textarea>
             </Layout>
           </Col>
         </Row>
