@@ -47,7 +47,7 @@ export default class DataList extends React.Component {
         >
           {this.props.title}
         </span>
-        <Scrollbars style={{ height: "290px", width: "350px", border: "3px solid white" }} autoHide hideTracksWhenNotNeeded>
+        <Scrollbars style={{ height: "290px", width: "350px", border: "3px solid white" }} hideTracksWhenNotNeeded>
           {!direct && orderedData.map(item => <SnippetV2 label={item.label} values={item.values} />)}
           {direct && this.props.data.map(item => <SnippetV2 label={item.label} values={[item.value]} direct />)}
           <div style={{ background: "white", height: "20px" }} />

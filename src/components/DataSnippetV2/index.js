@@ -15,8 +15,15 @@ const itemSource = {
     /* code here */
     return props;
   },
-  endDrag(props) {
-    /* code here */
+  endDrag(props, monitor) {
+    const item = monitor.getItem()
+    const dropResult = monitor.getDropResult()
+
+    // if (dropResult) {
+    //   console.log(dropResult);
+    // }
+
+    return props;
   }
 };
 
