@@ -24,6 +24,11 @@ import exampleData from "./query-2.json";
 
 console.log(exampleData);
 // console.log(exampleWikidata);
+const numberWithCommas = (x) => {
+  var parts = x.toString().split(",");
+  parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+  return parts.join(",");
+}
 
 function isValidURL(str) {
   var a = document.createElement("a");
@@ -39,15 +44,18 @@ class EditorV2 extends React.Component {
 
   render() {
     // const aliases = _.filter(exampleData, a => a.wdLabel === "alias");
-    const numeric = _.filter(exampleData, a => !isNaN(a.ps_Label));
+    const numeric = _.filter(exampleData, a => !isNaN(a.ps_Label) && a.wdpqLabel);
+    const identifier = _.filter(exampleData, a => !a.wdpqLabel);
     const urls = _.filter(exampleData, a => isValidURL(a.ps_Label));
     const strs = _.filter(
       exampleData,
-      a => isNaN(a.ps_Label) && !isValidURL(a.ps_Label)
+      a => isNaN(a.ps_Label) && !isValidURL(a.ps_Label) && a.wdpqLabel
     );
 
     const orderedNumeric = _.map(_.groupBy(numeric, "wdLabel"), d => {
-      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
+      const values = _.map(d, e => ({
+        value: numberWithCommas(e.ps_Label.replace(".", ",")),
+        tip: `${e.wdpqLabel? e.wdpqLabel + ": " : ""}${e.pq_Label || ""}` }));
 
       return {
         label: d[0].wdLabel,
@@ -55,7 +63,9 @@ class EditorV2 extends React.Component {
       };
     });
     const orderedURLs = _.map(_.groupBy(urls, "wdLabel"), d => {
-      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
+      const values = _.map(d, e => ({
+        value: e.ps_Label,
+        tip: `${e.wdpqLabel? e.wdpqLabel + ": " : ""}${e.pq_Label || ""}` }));
 
       return {
         label: d[0].wdLabel,
@@ -63,7 +73,16 @@ class EditorV2 extends React.Component {
       };
     });
     const orderedStrs = _.map(_.groupBy(strs, "wdLabel"), d => {
-      const values = _.map(d, e => ({ value: e.ps_Label, tip: e.pq_Label }));
+      const values = _.map(d, e => ({ value: e.ps_Label, tip: `${e.wdpqLabel? e.wdpqLabel + ": " : ""}${e.pq_Label || ""}` }));
+
+      return {
+        label: d[0].wdLabel,
+        values: values
+      };
+    });
+
+    const orderedIdentifier = _.map(_.groupBy(identifier, "wdLabel"), d => {
+      const values = _.map(d, e => ({ value: e.ps_Label, tip: `${e.wdpqLabel? e.wdpqLabel + ": " : ""}${e.pq_Label || ""}` }));
 
       return {
         label: d[0].wdLabel,
@@ -85,13 +104,9 @@ class EditorV2 extends React.Component {
         data: orderedNumeric
       },
       {
-        label: "Text",
-        data: orderedStrs
+        label: "Identifier",
+        data: orderedIdentifier
       },
-      {
-        label: "Text",
-        data: orderedStrs
-      }
     ];
 
     return (

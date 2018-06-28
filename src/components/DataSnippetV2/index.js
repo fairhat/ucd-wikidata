@@ -16,8 +16,8 @@ const itemSource = {
     return props;
   },
   endDrag(props, monitor) {
-    const item = monitor.getItem()
-    const dropResult = monitor.getDropResult()
+    const item = monitor.getItem();
+    const dropResult = monitor.getDropResult();
 
     // if (dropResult) {
     //   console.log(dropResult);
@@ -39,13 +39,13 @@ class Snippet extends Component {
   static propTypes = {
     label: PropTypes.string,
     values: PropTypes.arrayOf(PropTypes.object),
-    direct: PropTypes.bool,
+    direct: PropTypes.bool
   };
 
   static defaultProps = {
     label: null,
-    values: [ "-" ],
-    direct: false,
+    values: ["-"],
+    direct: false
   };
 
   state = {
@@ -56,9 +56,12 @@ class Snippet extends Component {
   mouseEnter = () => this.setState({ hover: true });
   mouseLeave = () => this.setState({ hover: false });
 
-  toggleMultiple = () => this.props.values.length > 1 ? this.setState({
-    showMultiple: !this.state.showMultiple
-  }) : {};
+  toggleMultiple = () =>
+    this.props.values.length > 1
+      ? this.setState({
+          showMultiple: !this.state.showMultiple
+        })
+      : {};
 
   render() {
     const {
@@ -69,11 +72,15 @@ class Snippet extends Component {
       direct
     } = this.props;
 
-    const multiValueTooltip = this.props.values.length > 1 ? 
-      `Es existieren ${this.props.values.length} Einträge. Hier klicken, um alle zu sehen.` :
-      `Es existiert 1 Eintrag.`;
+    const multiValueTooltip =
+      this.props.values.length > 1
+        ? `Es existieren ${this.props.values
+            .length} Einträge. Hier klicken, um alle zu sehen.`
+        : `Es existiert 1 Eintrag.`;
 
-    const mainVal = this.props.direct ? this.props.values[0] : this.props.values[0].value;
+    const mainVal = this.props.direct
+      ? this.props.values[0]
+      : this.props.values[0].value;
     let isImage = false;
     let isAudio = false;
 
@@ -100,14 +107,22 @@ class Snippet extends Component {
         onMouseLeave={this.mouseLeave}
       >
         {this.props.label &&
-          <p style={{ color: "#aaa", marginBottom: "0", marginLeft: "25px", }}>
+          <p style={{ color: "#aaa", marginBottom: "0", marginLeft: "25px" }}>
             {this.props.label}
           </p>}
-          { !this.props.direct && <Tooltip title={multiValueTooltip}>
+        {!this.props.direct &&
+          <Tooltip title={multiValueTooltip}>
             <Popover
-              content={<DataList title={this.props.label} data={this.props.values} direct />}
+              content={
+                <DataList
+                  title={this.props.label}
+                  data={this.props.values}
+                  direct
+                />
+              }
               trigger="click"
-              placement="bottom">
+              placement="bottom"
+            >
               <Tag
                 style={{
                   position: "absolute",
@@ -126,23 +141,25 @@ class Snippet extends Component {
           </Tooltip>}
         {connectDragPreview(
           <div style={{ width: "calc(100% - 25px)", marginLeft: "25px" }}>
-            {
-              isImage && <span>
+            {isImage &&
+              <span>
                 {!this.props.direct && <img src={mainVal} width="200" />}
                 {this.props.direct && <img src={mainVal} width="200" />}
-              </span>
-            }
-            {
-              isAudio &&  (
+              </span>}
+            {isAudio &&
               <audio controls>
                 <source src={mainVal} type="audio/ogg" />
-                  Your browser does not support the audio element.
-              </audio>)
-            }
-            { !isImage && !isAudio && <span>
-              {!this.props.direct && <Tooltip title={this.props.values[0].label}>{this.props.values[0].value}</Tooltip>}
-              {this.props.direct && this.props.values[0]}
-            </span>}
+                Your browser does not support the audio element.
+              </audio>}
+            {!isImage &&
+              !isAudio &&
+              <div>
+                {!this.props.direct &&
+                  <Tooltip title={this.props.values[0].tip}>
+                    {this.props.values[0].value}
+                  </Tooltip>}
+                {this.props.direct && this.props.values[0]}
+              </div>}
           </div>
         )}
         {this.state.hover &&
