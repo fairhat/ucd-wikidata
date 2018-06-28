@@ -21,7 +21,7 @@ export default class HelpComponent extends React.Component {
     return (
       <div style={{ marginTop: "10px", ...styles }}>
         <Tooltip placement="bottomRight" title={"Die Datenschnipsel enthalten Informationen aus Wikidata. Du kannst sie per Drag'n'Drop in deinem Artikel verwenden."}>
-          <Button onClick={this.showInfo} className="HelpButton" shape="circle" size="large" icon="question" style={{ borderColor: "#333" }} >
+          <Button onClick={this.showInfo} className="HelpButton" shape="circle" size="small" icon="question" style={{ borderColor: "#333" }} >
           </Button>
         </Tooltip>
       </div>
