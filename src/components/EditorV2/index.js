@@ -1,29 +1,19 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Layout, List, Affix } from "antd";
+import { Row, Col, Layout } from "antd";
 import Toolbar from "./Toolbar.js";
-import { Container, Draggable } from "react-smooth-dnd";
-import { DragDropContextProvider } from "react-dnd";
 import HTML5Backend from "react-dnd-html5-backend";
-import {
-  ConnectDragSource,
-  DragSource,
-  DragSourceConnector,
-  DragSourceMonitor,
-  DragDropContext
-} from "react-dnd";
-import SnippetV2 from "../DataSnippetV2/";
+import { DragDropContext } from "react-dnd";
 import DataSnippetModule from "../DataSnippetModule/";
 import _ from "lodash";
-import { Scrollbars } from "react-custom-scrollbars";
 import TextEditor from "../TextEditor/";
-// import _ from "lodash";
-// import { DragSource } from "react-dnd";
-import exampleWikidata from "./example-data.json";
+import WikiTopBar from "../WikiTopBar/";
+import LeftNavbar from "../LeftNavbar/";
 import exampleData from "./query-2.json";
+import "../../App.css";
 
-console.log(exampleData);
-// console.log(exampleWikidata);
+// console.log(exampleData);
+
 const numberWithCommas = (x) => {
   var parts = x.toString().split(",");
   parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
@@ -113,11 +103,12 @@ class EditorV2 extends React.Component {
       <div
         style={{
           padding: "20px",
-          background: "linear-gradient(white, #f6f6f6)"
+          background: " linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 4%, rgba(246,246,246,1) 6%, rgba(246,246,246,1) 100%)",
+          height: "100vh",
         }}
       >
         <Row>
-          <Col span={3}>
+          <Col span={2}>
             <Row>
               <img
                 src="https://www.famouslogos.net/images/wikipedia-logo.jpg"
@@ -126,48 +117,14 @@ class EditorV2 extends React.Component {
               />
             </Row>
             <Row style={{ marginTop: "15px", paddingRight: "15px" }}>
-              <p style={{ margin: "0" }}>
-                <a href="#">Hauptseite</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Themenportale</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Von A bis Z</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Zufälliger Artikel</a>
-              </p>
-
-              <p style={{ margin: "0", marginTop: "15px" }}>Mitmachen</p>
-              <hr />
-              <p style={{ margin: "0" }}>
-                <a href="#">Artikel verbessern</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Neuen Artikel anlegen</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Autorenportal</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Hilfe</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Letzte Änderungen</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Kontakt</a>
-              </p>
-              <p style={{ margin: "0" }}>
-                <a href="#">Spenden</a>
-              </p>
+              <LeftNavbar />
             </Row>
           </Col>
-          <Col span={21}>
-            <h1 style={{ margin: "0" }}>
+          <Col span={22}>
+            {/* <h1 style={{ margin: "0" }}>
               Sie bearbeiten gerade Artikel: Erde
-            </h1>
+            </h1> */}
+            <WikiTopBar />
             <Toolbar />
             <Layout style={{ padding: "5px", width: "100%" }}>
               <DataSnippetModule data={dataP} />

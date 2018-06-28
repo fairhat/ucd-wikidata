@@ -24,7 +24,7 @@ export default class DataSnippetModule extends React.Component {
     const { open } = this.state;
     return (
       <div>
-     <h3 onClick={this.toggle} style={{ cursor: "pointer", height: "27px" }}>Wikidata-Snippets <Icon type={open ? "up" : "down"} style={{}}/>  <HelpComponent style = {{transform: "translate(160px,-35px)"}}/>
+     <h3 style={{ cursor: "pointer", height: "27px" }}><span onClick={this.toggle}>Wikidata-Snippets <Icon type={open ? "up" : "down"} style={{}}/></span>  <HelpComponent style = {{transform: "translate(160px,-35px)"}}/>
               </h3>
       <Motion defaultStyle={{ height: 300 }} style={{ height: spring(this.state.height) }}>
         {interpolatingStyle =>

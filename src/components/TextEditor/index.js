@@ -11,10 +11,10 @@ const Types = {
 };
 
 const boxTarget = {
-  drop(props, monitor, comp) {
+  drop(props, monitor, comp, ...args) {
     const item = monitor.getItem();
     const val = item ? item.values[0].value : "";
-    
+    console.log(props, monitor, comp, ...args);
     comp.addValue(val);
     return { name: "TextEditor" };
   }

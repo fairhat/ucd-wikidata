@@ -2408,6 +2408,10 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
+codemirror@^5.26.0:
+  version "5.39.0"
+  resolved "https://registry.yarnpkg.com/codemirror/-/codemirror-5.39.0.tgz#4654f7d2f7e525e04a62e72d9482348ccb37dce5"
+
 collection-visit@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/collection-visit/-/collection-visit-1.0.0.tgz#4bc0373c164bc3291b4d368c829cf1a80a59dca0"
@@ -8135,6 +8139,14 @@ react-style-proptype@^3.0.0:
   dependencies:
     prop-types "^15.5.4"
 
+react-summernote@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/react-summernote/-/react-summernote-2.0.0.tgz#075bf882fcc6b77b9ab9d50099addbcbb229ab7a"
+  dependencies:
+    codemirror "^5.26.0"
+    prop-types "^15.5.10"
+    summernote "^0.8.3"
+
 react-textarea-autosize@^5.2.1:
   version "5.2.1"
   resolved "https://registry.yarnpkg.com/react-textarea-autosize/-/react-textarea-autosize-5.2.1.tgz#2b78f9067180f41b08ac59f78f1581abadd61e54"
@@ -9210,6 +9222,10 @@ style-loader@^0.20.3:
   dependencies:
     loader-utils "^1.1.0"
     schema-utils "^0.4.5"
+
+summernote@^0.8.3:
+  version "0.8.10"
+  resolved "https://registry.yarnpkg.com/summernote/-/summernote-0.8.10.tgz#21a5d7f18a3b07500b58b60d5907417a54897520"
 
 supports-color@1.2.0:
   version "1.2.0"

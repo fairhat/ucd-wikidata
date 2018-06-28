@@ -6,7 +6,7 @@ export default class Toolbar extends React.Component {
 
   render() {
     return (
-      <Row align="bottom" type="flex" style={{ height: "80px" }}>
+      <Row align="bottom" type="flex" style={{ height: "40px" }}>
         <Col span={10}>
           <ButtonGroup>
             <Button disabled size="large" icon="arrow-left" />

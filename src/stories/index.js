@@ -29,7 +29,7 @@ const HelpComponentStories = storiesOf("HelpComponent", module);
 const WikiEditorStories = storiesOf("WikiEditor", module);
 const EditorV2Stories = storiesOf("EditorV2", module);
 
-DataSnippetStories.addDecorator(withKnobs);
+// DataSnippetStories.addDecorator(withKnobs);
 
 DataSnippetStories.add("single", () =>
   <Center>
