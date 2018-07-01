@@ -29,8 +29,11 @@ function isValidURL(str) {
 class EditorV2 extends React.Component {
   state = {
     data: exampleData,
-    text: "Die Erde hat einen Radius von m"
+    text: "Die Erde hat einen Radius von m",
+    showModule: true,
   };
+
+  toggleModule = () => this.setState({ showModule: !this.state.showModule });
 
   render() {
     // const aliases = _.filter(exampleData, a => a.wdLabel === "alias");
@@ -103,7 +106,8 @@ class EditorV2 extends React.Component {
       <div
         style={{
           padding: "20px",
-          background: " linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 4%, rgba(246,246,246,1) 6%, rgba(246,246,246,1) 100%)",
+          paddingTop: "5px",
+          background: " linear-gradient(to bottom, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 5%, rgba(246,246,246,1) 9%, rgba(246,246,246,1) 100%)",
           height: "100vh",
         }}
       >
@@ -113,7 +117,7 @@ class EditorV2 extends React.Component {
               <img
                 src="https://www.famouslogos.net/images/wikipedia-logo.jpg"
                 width="150px"
-                style={{ marginTop: "20px" }}
+                style={{ marginTop: "20px", transform: "translateX(-25px)" }}
               />
             </Row>
             <Row style={{ marginTop: "15px", paddingRight: "15px" }}>
@@ -125,11 +129,11 @@ class EditorV2 extends React.Component {
               Sie bearbeiten gerade Artikel: Erde
             </h1> */}
             <WikiTopBar />
-            <Toolbar />
-            <Layout style={{ padding: "5px", width: "100%" }}>
-              <DataSnippetModule data={dataP} />
-              <TextEditor />
+            <Toolbar  onToggleModule={this.toggleModule} isOpen={this.state.showModule} />
+            <Layout style={{ padding: "0px", width: "100%", borderLeft: "1px solid #a7d7f9", borderRight: "1px solid #a7d7f9" }}>
+              <DataSnippetModule data={dataP} showModule={this.state.showModule} />
             </Layout>
+            <Layout><TextEditor /></Layout>
           </Col>
         </Row>
       </div>

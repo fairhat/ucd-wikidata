@@ -107,7 +107,7 @@ class Snippet extends Component {
         onMouseLeave={this.mouseLeave}
       >
         {this.props.label &&
-          <p style={{ color: "#aaa", marginBottom: "0", marginLeft: "25px" }}>
+          <p style={{ color: "#aaa", marginBottom: "0", marginLeft: "35px" }}>
             {this.props.label}
           </p>}
         {!this.props.direct &&
@@ -140,7 +140,7 @@ class Snippet extends Component {
             </Popover>
           </Tooltip>}
         {connectDragPreview(
-          <div style={{ width: "calc(100% - 25px)", marginLeft: "25px" }}>
+          <div style={{ width: "calc(100% - 25px)", marginLeft: "35px" }}>
             {isImage &&
               <span>
                 {!this.props.direct && <img src={mainVal} width="200" />}

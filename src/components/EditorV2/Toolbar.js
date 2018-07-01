@@ -1,44 +1,73 @@
 import React from "react";
-import { Row, Col, Button } from "antd";
+import { Row, Col, Button, Icon } from "antd";
 import ButtonGroup from "antd/lib/button/button-group";
 
-export default class Toolbar extends React.Component {
+const WButton = ({ style, children, isActive = false, ...props }) =>
+  <Button style={{ borderRadius: "0", ...(isActive ? {
+    background: "#36c",
+    color: "white"
+  } : {}), ...style }} {...props}>
+    {children}
+  </Button>;
 
+export default class Toolbar extends React.Component {
   render() {
+    const { onToggleModule = () => {}, isOpen } = this.props;
+
     return (
-      <Row align="bottom" type="flex" style={{ height: "40px" }}>
-        <Col span={10}>
-          <ButtonGroup>
-            <Button disabled size="large" icon="arrow-left" />
-            <Button disabled size="large" icon="arrow-right" />
-            <Button disabled size="large">
-              <span>Absatz</span>
-            </Button>
-            <Button disabled size="large">
-              <span>Schrift</span>
-            </Button>
-            <Button disabled size="large" icon="link" />
-            <Button disabled size="large">
-              <span>Belegen</span>
-            </Button>
-            <Button disabled size="large" icon="bars" />
-            <Button disabled size="large">
-              <span>Einfügen</span>
-            </Button>
-          </ButtonGroup>
-        </Col>
-        <Col span={7} push={7}>
-          <ButtonGroup>
-            <Button disabled size="large" icon="question" />
-            <Button disabled size="large" icon="warning" />
-            <Button disabled size="large" icon="database" />
-            <Button disabled size="large" icon="edit" />
-            <Button disabled size="large">
-              <span>Artikel veröffentlichen</span>
-            </Button>
-          </ButtonGroup>
-        </Col>
-      </Row>
+      <div>
+        <Row
+          className="toolbar"
+          align="bottom"
+          type="flex"
+          style={{
+            height: "40px",
+            background: "white",
+            borderTop: "1px solid #a7d7f9",
+            borderBottom: "1px solid #ccc",
+            fontSize: "0.75rem",
+            width: "100%",
+          }}
+        >
+          <Col span={10}>
+            <ButtonGroup style={{ top: -1 }}>
+              <WButton size="large" icon="arrow-left" />
+              <WButton size="large" icon="arrow-right" />
+              <WButton size="large">
+                <span>Absatz</span>
+              </WButton>
+              <WButton size="large">
+                <span>Schrift</span>
+              </WButton>
+              <WButton size="large" icon="link" />
+              <WButton size="large">
+                <span>Belegen</span>
+              </WButton>
+              <WButton size="large" icon="bars" />
+              <WButton size="large">
+                <span>Einfügen</span>
+              </WButton>
+              <WButton size="large" onClick={onToggleModule} isActive={isOpen} icon="tag">
+                <span>Wikidata-Snippets</span>
+                { isOpen ? <Icon type="up" /> : <Icon type="down" /> }
+              </WButton>
+            </ButtonGroup>
+          </Col>
+          <Col offset={8} span={6}>
+            <ButtonGroup style={{ top: -1 }}>
+              <WButton size="large" icon="question" />
+              <WButton size="large" icon="warning" />
+              <WButton size="large" icon="database" />
+              <WButton size="large" icon="edit" />
+              <WButton size="large" style={{ background: "#36c" }}>
+                <span style={{ color: "white" }}>
+                  Änderungen veröffentlichen ...
+                </span>
+              </WButton>
+            </ButtonGroup>
+          </Col>
+        </Row>
+      </div>
     );
   }
 }

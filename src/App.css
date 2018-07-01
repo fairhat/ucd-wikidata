@@ -18,3 +18,7 @@ a:hover {
 .wikibar button:hover {
   text-decoration: underline !important;
 }
+
+.toolbar {
+  color: black;
+}

@@ -32,22 +32,25 @@ export default class DataList extends React.Component {
     const orderedData = this.props.data;
 
     return (
-      <div style={{ width: "350px", display: "inline-block", ...leftMargin }}>
+      <div style={{ width: "419.2px", display: "inline-block", ...leftMargin }}>
         <span
           style={{
             background: "white",
             textAlign: "center",
             padding: "0 8px 5px 6px",
-            height: "20px",
             marginBottom: "0",
-            borderTopRadius: "25px",
+            border: "1px solid #a2a9b1",
             borderTop: "3px solid white",
-            borderBottom: direct ? "2px solid #ccc" : "none",
+            borderBottom: direct ? "2px solid white" : "none",
+            bottom: "1px",
+            position: "relative",
+            width: "80px",
+            zIndex: 22
           }}
         >
           {this.props.title}
         </span>
-        <Scrollbars style={{ height: "290px", width: "350px", border: "3px solid white" }} hideTracksWhenNotNeeded>
+        <Scrollbars style={{ height: "290px", width: "419.2px", border: "1px solid #a2a9b1" }} hideTracksWhenNotNeeded>
           {!direct && orderedData.map(item => <SnippetV2 label={item.label} values={item.values} />)}
           {direct && this.props.data.map(item => <SnippetV2 label={item.label} values={[item.value]} direct />)}
           <div style={{ background: "white", height: "20px" }} />

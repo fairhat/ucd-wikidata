@@ -8,15 +8,18 @@ const WikiButton = ({ style, isWhite = false, children, ...restProps }) => (
     backgroundPosition: "bottom left",
     backgroundRepeat: "repeat-x",
     color: "#0645ad",
-    borderRadius: "none",
+    borderRadius: "0",
     border: "none",
     borderLeft: "1px solid transparent",
     borderRight: "1px solid transparent",
     borderImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, #a7d7f9 100%)",
     borderImageSlice: "1",
-    height: "40px",
+    padding: "4px",
+    paddingTop: "17px",
+    bottom: -1,
+    height: "47px",
     ...style
-  }}>{children}</Button>
+  }}><span style={{ fontSize: "0.75rem" }}>{children}</span></Button>
 );
 
 export default WikiButton;

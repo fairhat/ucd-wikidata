@@ -47,14 +47,16 @@ class TextEditor extends React.Component {
     return (
       connectDropTarget &&
       connectDropTarget (
+        <div>
         <textarea
-          style={{ width: "100%", marginTop: "10px" }}
+          style={{ width: "100%" }}
           rows="15"
           // onDrop={this.SnippedDropped}
           placeholder="Text hier eingeben"
           onChange={this.handleChange}
           value={this.state.text}
         />
+        </div>
       )
     );
   }
