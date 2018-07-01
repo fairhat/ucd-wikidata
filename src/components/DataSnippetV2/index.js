@@ -101,7 +101,8 @@ class Snippet extends Component {
           borderBottom: "1px solid #ddd",
           borderTop: "1px solid #ddd",
           position: "relative",
-          minHeight: "65px"
+          minHeight: "65px",
+          maxWidth: "415px",
         }}
         onMouseEnter={this.mouseEnter}
         onMouseLeave={this.mouseLeave}
@@ -129,9 +130,9 @@ class Snippet extends Component {
                   right: 0,
                   top: 3,
                   color: "#aaa",
-                  borderRadius: "20px",
+                  borderRadius: "0px",
                   background: "none",
-                  borderColor: "#ccc"
+                  borderColor: "#aaa"
                 }}
                 color="#ddd"
               >

@@ -49,9 +49,8 @@ class TextEditor extends React.Component {
       connectDropTarget (
         <div>
         <textarea
-          style={{ width: "100%" }}
+          style={{ width: "100%", border: "1px solid #ccc", }}
           rows="15"
-          // onDrop={this.SnippedDropped}
           placeholder="Text hier eingeben"
           onChange={this.handleChange}
           value={this.state.text}

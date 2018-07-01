@@ -14,7 +14,7 @@ const WikiButton = ({ style, isWhite = false, children, ...restProps }) => (
     borderRight: "1px solid transparent",
     borderImage: "linear-gradient(to bottom, rgba(255,255,255,1) 0%, #a7d7f9 100%)",
     borderImageSlice: "1",
-    padding: "4px",
+    padding: "6px",
     paddingTop: "17px",
     bottom: -1,
     height: "47px",

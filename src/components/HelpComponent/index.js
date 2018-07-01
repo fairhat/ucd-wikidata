@@ -19,12 +19,10 @@ export default class HelpComponent extends React.Component {
   render() {
     const styles = this.props.style || {};
     return (
-      <div style={{ marginTop: "10px", ...styles }}>
-        <Tooltip placement="bottomRight" title={"Du kannst die Wikidata-Snippets beispielsweise per Drag'n'Drop in deinem Artikel verwenden."}>
-          <Button onClick={this.showInfo} className="HelpButton" shape="circle" size="small" icon="question" style={{ borderColor: "#333" }} >
-          </Button>
-        </Tooltip>
-      </div>
+      <Tooltip placement="bottomRight" title={"Du kannst die Wikidata-Snippets per Drag'n'Drop in deinem Artikel verwenden."}>
+        <Button onClick={this.showInfo} className="HelpButton" shape="circle" size="small" icon="question" style={{ borderColor: "#ccc", borderRadius: "0px", height: "100%" }} >
+        </Button>
+      </Tooltip>
     );
   }
 }

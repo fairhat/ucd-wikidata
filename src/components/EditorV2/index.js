@@ -125,9 +125,6 @@ class EditorV2 extends React.Component {
             </Row>
           </Col>
           <Col span={22}>
-            {/* <h1 style={{ margin: "0" }}>
-              Sie bearbeiten gerade Artikel: Erde
-            </h1> */}
             <WikiTopBar />
             <Toolbar  onToggleModule={this.toggleModule} isOpen={this.state.showModule} />
             <Layout style={{ padding: "0px", width: "100%", borderLeft: "1px solid #a7d7f9", borderRight: "1px solid #a7d7f9" }}>

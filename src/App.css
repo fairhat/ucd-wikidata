@@ -22,3 +22,9 @@ a:hover {
 .toolbar {
   color: black;
 }
+
+.wd-searchbar input {
+  border-radius: 0px;
+  border-top: none;
+  border-bottom: 1px solid #ccc;
+}

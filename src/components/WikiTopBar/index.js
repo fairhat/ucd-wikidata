@@ -35,7 +35,7 @@ const WikiTopBar = () =>
         </WikiButton>
         <Search
           placeholder="Wikipedia durchsuchen"
-          style={{ width: "250px", marginLeft: "10px" }}
+          style={{ width: "400px", marginLeft: "10px" }}
         />
       </div>
       <div style={{ clear: "both" }} />
