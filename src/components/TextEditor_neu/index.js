@@ -5,11 +5,11 @@ import {
   DropTargetMonitor,
   ConnectDropTarget,
 } from 'react-dnd';
-
+import { Row, Col } from "antd";
 import { Editor } from 'react-draft-wysiwyg';
 import { EditorState, ContentState, convertFromHTML, Modifier } from 'draft-js';
 import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import './style.css'
+import './style.css';
 
 
 const Types = {
@@ -40,12 +40,12 @@ class TextEditor_neu extends React.Component {
     const contentState = editorState.getCurrentContent();
     const ncs = Modifier.insertText(contentState, selection, value);
     const es = EditorState.push(editorState, ncs, 'insert-fragment');
-    this.setState({editorState: es});
+    this.setState({ editorState: es });
   }
 
   onEditorStateChange = editorState => {
-    console.log("EditorChange",editorState.getCurrentContent())
-    this.setState({editorState})
+    console.log("EditorChange", editorState.getCurrentContent())
+    this.setState({ editorState })
   }
 
 
@@ -57,13 +57,17 @@ class TextEditor_neu extends React.Component {
       connectDropTarget &&
       connectDropTarget(
         <div>
-          <Editor
-            style={{ width: "100%", marginTop: "10px" }}
-            rows="15" 
-            toolbarHidden="true" 
-            editorState={this.state.editorState}
-            onEditorStateChange={this.onEditorStateChange}
-          />
+          <Row>
+            <Col span={24}>
+              <Editor
+                style={{ width: "100%", marginTop: "10px" }}
+                rows="15"
+                toolbarHidden="true"
+                editorState={this.state.editorState}
+                onEditorStateChange={this.onEditorStateChange}
+              />
+            </Col>
+          </Row>
         </div>
       )
     );
