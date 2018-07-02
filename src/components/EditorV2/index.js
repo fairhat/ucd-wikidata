@@ -11,6 +11,7 @@ import WikiTopBar from "../WikiTopBar/";
 import LeftNavbar from "../LeftNavbar/";
 import exampleData from "./query-2.json";
 import "../../App.css";
+import TextEditor_neu from "../TextEditor_neu/index.js";
 
 // console.log(exampleData);
 
@@ -132,7 +133,7 @@ class EditorV2 extends React.Component {
                 <DataSnippetModule data={dataP} showModule={this.state.showModule} />
               </Spin>
             </Layout>
-            <Layout><TextEditor /></Layout>
+            <Layout><TextEditor_neu /></Layout>
           </Col>
         </Row>
       </div>
