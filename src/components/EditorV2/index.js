@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { Row, Col, Layout } from "antd";
+import { Row, Col, Layout, Spin } from "antd";
 import Toolbar from "./Toolbar.js";
 import HTML5Backend from "react-dnd-html5-backend";
 import { DragDropContext } from "react-dnd";
@@ -128,7 +128,9 @@ class EditorV2 extends React.Component {
             <WikiTopBar />
             <Toolbar  onToggleModule={this.toggleModule} isOpen={this.state.showModule} />
             <Layout style={{ padding: "0px", width: "100%", borderLeft: "1px solid #a7d7f9", borderRight: "1px solid #a7d7f9" }}>
-              <DataSnippetModule data={dataP} showModule={this.state.showModule} />
+              <Spin spinning={false}>
+                <DataSnippetModule data={dataP} showModule={this.state.showModule} />
+              </Spin>
             </Layout>
             <Layout><TextEditor /></Layout>
           </Col>

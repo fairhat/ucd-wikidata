@@ -5,6 +5,7 @@ import {
 	DropTargetMonitor,
 	ConnectDropTarget,
 } from 'react-dnd';
+import { Divider } from "antd";
 
 const Types = {
   ITEM: "snippet"
@@ -47,14 +48,16 @@ class TextEditor extends React.Component {
     return (
       connectDropTarget &&
       connectDropTarget (
-        <div>
-        <textarea
+        <div style={{ background: "white", padding: "5px" }}>
+          <h1 contentEditable>Erde</h1>
+          <Divider />
+        {/* <textarea
           style={{ width: "100%", border: "1px solid #ccc", }}
           rows="15"
           placeholder="Text hier eingeben"
           onChange={this.handleChange}
           value={this.state.text}
-        />
+        /> */}
         </div>
       )
     );

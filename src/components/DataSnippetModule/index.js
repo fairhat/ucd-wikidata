@@ -45,14 +45,14 @@ export default class DataSnippetModule extends React.Component {
             <div
               style={{
                 border: "none",
-                background: "#ddd",
+                background: "#fff",
                 overflowY: "hidden",
                 width: "100%",
                 ...interpolatingStyle
               }}
             >
               {interpolatingStyle.height >= 340 &&
-                <div>
+                <div style={{ background: "#ddd" }}>
                   <div
                     style={{
                       width: "100%",
@@ -114,7 +114,7 @@ export default class DataSnippetModule extends React.Component {
                   />
                 </div>}
               {interpolatingStyle.height < 340 &&
-                <Spin style={{ transform: "translate(50%, 50%)" }} />}
+                <Spin tip="wird geladen..."><div style={{ width: "100%", minHeight: "100px", height: "100%", background: "white" }} /></Spin>}
             </div>}
         </Motion>
       </div>
