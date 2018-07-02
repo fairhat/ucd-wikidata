@@ -26,4 +26,15 @@
   p{
     color: black;
   }
+ 
+  infT{
+    color: #000;
+    text-align: center;
+    font-size: 18pt;
+  }
+  infP{
+    font-size: 12pt;
+    font-family: Arial, Helvetica, sans-serif; 
+    padding-left: 5px;
+  }
    
