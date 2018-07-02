@@ -1,0 +1,11 @@
+.DraftEditor-editorContainer {
+    background-color:#fff;
+    border-left:.1px solid transparent;
+    position:relative;
+    z-index:1;
+    height: 750px;
+    font-size: 14pt;
+    font-style: normal;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+   
