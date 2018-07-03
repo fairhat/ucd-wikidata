@@ -3,7 +3,7 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 import Icon from "material-icons-react";
 import dragIcon from "./Press-and-Drag.svg";
-import { List, Tag, Tooltip, Popover } from "antd";
+import { List, Tag, Tooltip, Popover, Icon as AIcon } from "antd";
 import DataList from "../DataList/";
 
 const Types = {
@@ -108,7 +108,7 @@ class Snippet extends Component {
         onMouseLeave={this.mouseLeave}
       >
         {this.props.label &&
-          <p style={{ color: "#aaa", marginBottom: "0", marginLeft: "35px" }}>
+          <p style={{ color: "#aaa", marginBottom: "0", marginLeft: "35px", maxWidth: "260px", overflow: "hidden" }}>
             {this.props.label}
           </p>}
         {!this.props.direct &&
@@ -127,8 +127,8 @@ class Snippet extends Component {
               <Tag
                 style={{
                   position: "absolute",
-                  right: 0,
-                  top: 3,
+                  right: 5,
+                  top: 5,
                   color: "#aaa",
                   borderRadius: "0px",
                   background: "none",
@@ -136,7 +136,7 @@ class Snippet extends Component {
                 }}
                 color="#ddd"
               >
-                {this.props.values.length}
+                {this.props.values.length}{" "}|{" "}<AIcon type="down" />
               </Tag>
             </Popover>
           </Tooltip>}

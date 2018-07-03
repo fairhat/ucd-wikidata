@@ -3,14 +3,22 @@ import {
   DropTarget,
   DropTargetConnector,
   DropTargetMonitor,
-  ConnectDropTarget,
-} from 'react-dnd';
+  ConnectDropTarget
+} from "react-dnd";
 import { Row, Col } from "antd";
-import { Editor } from 'react-draft-wysiwyg';
-import { EditorState, ContentState, convertFromHTML, Modifier } from 'draft-js';
-import 'react-draft-wysiwyg/dist/react-draft-wysiwyg.css';
-import './style.css';
-
+import { Editor } from "react-draft-wysiwyg";
+import {
+  EditorState,
+  ContentState,
+  convertFromHTML,
+  convertToRaw,
+  Modifier
+} from "draft-js";
+import draftToHtml from "draftjs-to-html";
+import htmlToDraft from "html-to-draftjs";
+import "react-draft-wysiwyg/dist/react-draft-wysiwyg.css";
+import "./style.css";
+import initData from "./data.js";
 
 const Types = {
   ITEM: "snippet"
@@ -20,42 +28,18 @@ const boxTarget = {
   drop(props, monitor, comp, ...args) {
     const item = monitor.getItem();
     const val = item ? item.values[0].value : "";
-    console.log(props, monitor, comp, ...args);
+    // console.log(props, monitor, comp, ...args);
     comp.addValue(val);
     return { name: "TextEditor" };
   }
-}
-
-const init_text = `
-  <h1>Erde</h1>
-  <p>Die <b>Erde</b> ist der <a href="/wiki/Dichte" title="Dichte">dichteste</a>,
-  fünftgrößte und der <a href="/wiki/Sonne" title="Sonne">Sonne</a> drittnächste
-  <a href="/wiki/Planet" title="Planet">Planet</a> des <a href="/wiki/Sonnensystem" title="Sonnensystem">Sonnensystems</a>.
-  Sie ist Ursprungsort und Heimat aller bekannten <a href="/wiki/Lebewesen" title="Lebewesen">Lebewesen</a>. 
-  Ihr Durchmesser beträgt mehr als        <a href="/wiki/Kilometer" class="mw-redirect" title="Kilometer">Kilometer</a> 
-  und ihr Alter etwa 4,6 Milliarden <a href="/wiki/Jahr" title="Jahr">Jahre</a>. Nach ihrer 
-  vorherrschenden <a href="/wiki/Geochemie" title="Geochemie">geochemischen</a> 
-  Beschaffenheit wurde der Begriff der „<a href="/wiki/Erd%C3%A4hnlicher_Planet" class="mw-redirect" title="Erdähnlicher Planet">erdähnlichen Planeten</a>“ 
-  geprägt. Das <a href="/wiki/Astronomisches_Symbol" title="Astronomisches Symbol">astronomische Symbol</a> 
-  der Erde ist <a href="/wiki/%E2%99%81" title="♁">♁</a> oder <a href="/wiki/Radkreuz" title="Radkreuz">⊕</a>.
-  <sup id="cite_ref-4" class="reference"><a href="#cite_note-4">[4]</a></sup></p>
-  <p>Da die Erdoberfläche zu etwa zwei Dritteln aus <a href="/wiki/Wasser" title="Wasser">Wasser</a> 
-  besteht und daher die Erde vom <a href="/wiki/Weltraum" title="Weltraum">All</a> betrachtet vorwiegend blau erscheint, 
-  wird sie auch <b>Blauer Planet</b> genannt. Sie wird <a href="/wiki/Metapher" title="Metapher">metaphorisch</a> 
-  auch als „<a href="/wiki/Raumschiff_Erde" title="Raumschiff Erde">Raumschiff Erde</a>“ bezeichnet.</p>
-  <p>Das Wort für Erde ist in fast allen Sprachen <a href="/wiki/Femininum" class="mw-redirect" title="Femininum">femininum</a>.
-  <sup id="cite_ref-5" class="reference"><a href="#cite_note-5">[5]</a></sup> 
-  Die Erde spielt als Lebensgrundlage des Menschen in allen <a href="/wiki/Religion" title="Religion">Religionen</a> 
-  eine herausragende Rolle als <a href="/wiki/Heilig" title="Heilig">heilige</a> <a href="/wiki/Ganzheit" title="Ganzheit">Ganzheit</a>; 
-  in etlichen <a href="/wiki/Ethnische_Religionen" title="Ethnische Religionen">ethnischen-</a>, <a href="/wiki/Volksfr%C3%B6mmigkeit" title="Volksfrömmigkeit">Volks-</a> 
-  und <a href="/wiki/Historische_Religion" class="mw-redirect" title="Historische Religion">historischen Religionen</a> 
-  entweder als diffuse <a href="/wiki/Gott" title="Gott">Vergöttlichung</a> einer „<a href="/wiki/Mutter_Erde" title="Mutter Erde">Mutter Erde</a>“ 
-  oder als personifizierte <a href="/wiki/Erdg%C3%B6ttin" title="Erdgöttin">Erdgöttin</a>.<sup id="cite_ref-6" class="reference"><a href="#cite_note-6">[6]</a></sup></p>`
+};
 
 class TextEditor_neu extends React.Component {
   state = {
     //text: "Die Erde hat einen Radius von m",
-    editorState: EditorState.createWithContent(ContentState.createFromBlockArray(convertFromHTML(init_text)))
+    editorState: EditorState.createWithContent(
+      ContentState.createFromBlockArray(convertFromHTML(initData))
+    )
   };
 
   addValue = value => {
@@ -63,19 +47,18 @@ class TextEditor_neu extends React.Component {
     const selection = editorState.getSelection();
     const contentState = editorState.getCurrentContent();
     const ncs = Modifier.insertText(contentState, selection, value);
-    const es = EditorState.push(editorState, ncs, 'insert-fragment');
+    const es = EditorState.push(editorState, ncs, "insert-fragment");
     this.setState({ editorState: es });
-  }
+  };
 
   onEditorStateChange = editorState => {
-    console.log("EditorChange", editorState.getCurrentContent())
-    this.setState({ editorState })
-  }
-
+    // console.log("EditorChange", editorState.getCurrentContent());
+    this.setState({ editorState });
+  };
 
   render() {
-    const { canDrop, isOver, connectDropTarget } = this.props
-    const isActive = canDrop && isOver
+    const { canDrop, isOver, connectDropTarget } = this.props;
+    const isActive = canDrop && isOver;
 
     return (
       connectDropTarget &&
@@ -86,27 +69,73 @@ class TextEditor_neu extends React.Component {
               <Editor
                 style={{ width: "100%", marginTop: "10px" }}
                 rows="15"
-                toolbarHidden="true"
+                toolbarHidden
                 editorState={this.state.editorState}
                 onEditorStateChange={this.onEditorStateChange}
               />
             </Col>
-            <Col span={7}>
-              <div style={{background:"white"}}>
-                <div style={{paddingTop:"100px"}}>
-                  <div style={{ background: "rgb(176, 196, 222)", width: "100%", height: "38px", textAlign: 'center' }}>
-                    <infT><b> Erde </b></infT>
-                  </div>
-                  <div style={{ background: "black", width: "100%", height: "350px", textAlign: 'center' }}>
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" width="70%" />
-                  </div>
-                  <div style={{ background: "rgb(220, 220, 220)", width: "100%", height: "550px" }}>
-                    <infP>Die Erde, aufgenommen von Apollo 17 am 7. Dezember 1972  </infP>
-                  </div>
-                </div>
-              </div>
+            <Col span={7} style={{ background: "white" }}>
+              <table className="wikitable" style={{ marginTop: "105px" }}>
+                <thead>
+                  <tr>
+                    <th colSpan="2">Erde</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td colSpan="2" align="center"><img src="https://upload.wikimedia.org/wikipedia/commons/9/97/The_Earth_seen_from_Apollo_17.jpg" height="350px" /></td>
+                  </tr>
+                  <tr>
+                    <td colSpan="2" align="center">Die Erde, aufgenommen von Apollo 17 am 7. Dezember 1972</td>
+                  </tr>
+                  <tr className="header">
+                    <td className="header" colSpan="2" align="center">Eigenschaften des Orbits</td>
+                  </tr>
+                  <tr>
+                    <td>Große Halbachse</td>
+                    <td>1 AE (149,6 Mio. km)</td>
+                  </tr>
+                  <tr>
+                    <td>Perihel – Aphel</td>
+                    <td>0,983 – 1,017 AE </td>
+                  </tr>
+                  <tr>
+                    <td>Exzentrizität</td>
+                    <td>0,0167</td>
+                  </tr>
+                  <tr>
+                    <td>Neigung der Bahnebene</td>
+                    <td>0°</td>
+                  </tr>
+                  <tr>
+                    <td>Siderische Umlaufzeit</td>
+                    <td>365,256 d</td>
+                  </tr>
+                  <tr className="header">
+                    <td className="header" colSpan="2" align="center">Physikalische Eigenschaften</td>
+                  </tr>
+                  <tr>
+                    <td>Masse</td>
+                    <td>5,974 · 1024^24 kg </td>
+                  </tr>
+                  <tr>
+                    <td>Mittlere Dichte</td>
+                    <td>5,515 g/cm³</td>
+                  </tr>
+                  <tr>
+                    <td>Fallbeschleunigung*</td>
+                    <td>9,80665 m/s²</td>
+                  </tr>
+                </tbody>
+              </table>
             </Col>
           </Row>
+          {/* <Row>
+            <textarea
+              style={{ width: "100%", height: "350px" }}
+              value={draftToHtml(convertToRaw(this.state.editorState.getCurrentContent()))}
+            />
+          </Row> */}
         </div>
       )
     );
@@ -116,5 +145,5 @@ class TextEditor_neu extends React.Component {
 export default DropTarget(Types.ITEM, boxTarget, (connect, monitor) => ({
   connectDropTarget: connect.dropTarget(),
   isOver: monitor.isOver(),
-  canDrop: monitor.canDrop(),
+  canDrop: monitor.canDrop()
 }))(TextEditor_neu);

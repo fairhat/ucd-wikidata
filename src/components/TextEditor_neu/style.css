@@ -27,14 +27,63 @@
     color: black;
   }
  
-  infT{
+  .infT{
     color: #000;
     text-align: center;
     font-size: 18pt;
   }
-  infP{
+  .infP{
     font-size: 12pt;
     font-family: Arial, Helvetica, sans-serif; 
     padding-left: 5px;
   }
-   
+  
+  table.wikitable {
+    font-family: Georgia, serif;
+    border: 1px solid #1C6EA4;
+    background-color: #EEEEEE;
+    width: 100%;
+    text-align: left;
+    border-collapse: collapse;
+  }
+  table.wikitable td, table.wikitable th {
+    border: 1px solid #AAAAAA;
+    padding: 3px 2px;
+  }
+  table.wikitable tbody td {
+    font-size: 13px;
+  }
+  table.wikitable tr:nth-child(even) {
+    background: #D0E4F5;
+  }
+  table.wikitable thead {
+    background: #B7D0E8;
+    border-bottom: 2px solid #444444;
+  }
+  table.wikitable thead th {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    border-left: 2px solid #D0E4F5;
+  }
+  table.wikitable thead th:first-child {
+    border-left: none;
+  }
+  
+  table.wikitable tfoot td {
+    font-size: 14px;
+  }
+
+  table.wikitable tbody td.header {
+    font-size: 15px;
+    font-weight: bold;
+    color: #000000;
+    text-align: center;
+    /* border-left: 1px solid #D0E4F5; */
+  }
+
+  table.wikitable tbody tr.header {
+    background: #B7D0E8;
+    border-bottom: 1px solid #444444;
+  }

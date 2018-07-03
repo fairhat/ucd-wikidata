@@ -1,0 +1,11 @@
+@keyframes glowing {
+  0% { box-shadow: 0 0 -5px #1890ff; }
+  40% { box-shadow: 0 0 5px #1890ff; }
+  60% { box-shadow: 0 0 5px #1890ff; }
+  100% { box-shadow: 0 0 -5px #1890ff;}
+}
+
+.button-glow {
+  animation: glowing 1200ms infinite ease-out;
+  z-index: 50;
+}

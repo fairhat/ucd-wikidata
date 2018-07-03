@@ -28,3 +28,8 @@ a:hover {
   border-top: none;
   border-bottom: 1px solid #ccc;
 }
+
+.isResizable {
+  overflow: hidden;
+  resize: both;
+}

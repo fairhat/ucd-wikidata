@@ -6,15 +6,19 @@ import { Spin, Icon, Input } from "antd";
 import HelpComponent from "../HelpComponent/";
 import { Motion, spring } from "react-motion";
 
+const NORMAL_HEIGHT = 360;
+const MAX_HEIGHT = 500;
+
 export default class DataSnippetModule extends React.Component {
   state = {
     offsetLeft: 0,
-    height: 0
+    height: 0,
+
   };
 
   componentWillMount() {
     if (this.props.showModule) {
-      this.setState({ height: 350 });
+      this.setState({ height: NORMAL_HEIGHT });
     }
   }
 
@@ -26,7 +30,7 @@ export default class DataSnippetModule extends React.Component {
 
   toggle = () => {
     this.setState({
-      height: this.state.height === 350 ? 0 : 350
+      height: this.state.height === NORMAL_HEIGHT ? 0 : NORMAL_HEIGHT
     });
   };
 
@@ -38,7 +42,7 @@ export default class DataSnippetModule extends React.Component {
         {/* <h3 style={{ cursor: "pointer", height: "27px" }}><span onClick={this.toggle}>Wikidata-Snippets <Icon type={open ? "up" : "down"} style={{}}/></span>  <HelpComponent style = {{transform: "translate(160px,-35px)"}}/> */}
         {/* </h3> */}
         <Motion
-          defaultStyle={{ height: 350 }}
+          defaultStyle={{ height: NORMAL_HEIGHT }}
           style={{ height: spring(this.state.height) }}
         >
           {interpolatingStyle =>
@@ -76,7 +80,12 @@ export default class DataSnippetModule extends React.Component {
                       <Input.Search
                         className="wd-searchbar"
                         placeholder="Einträge durchsuchen"
-                        style={{ width: "400px", marginLeft: "10px", borderRadius: "0px", height: "40px" }}
+                        style={{
+                          width: "400px",
+                          marginLeft: "10px",
+                          borderRadius: "0px",
+                          height: "40px"
+                        }}
                       />
                     </div>
                   </div>
@@ -100,6 +109,7 @@ export default class DataSnippetModule extends React.Component {
                           title={d.label}
                           data={d.data}
                           first={i === 0}
+                          key={i}
                         />
                       )}
                     </div>
@@ -107,14 +117,46 @@ export default class DataSnippetModule extends React.Component {
                   <div
                     style={{
                       width: "100%",
-                      height: "10px",
-                      background: "white",
-                      cursor: "row-resize"
+                      height: "20px",
+                      background: "#eaecf0",
+                      border: "1px solid #ccc",
+                      cursor: "row-resize",
+                      userSelect: "none",
+                      textAlign: "center",
                     }}
-                  />
+                  >
+                    <p
+                      style={{
+                        textAlign: "center",
+                        fontSize: "22px",
+                        margin: "0",
+                        userSelect: "none"
+                      }}
+                    >
+                      {/* <span
+                        style={{
+                          display: "block",
+                          height: "30px",
+                          transform: "rotate(-90deg) translateX(7px)",
+                          userSelect: "none"
+                        }}
+                      >
+                        ‖
+                      </span> */}
+                    </p>
+                  </div>
                 </div>}
               {interpolatingStyle.height < 340 &&
-                <Spin tip="wird geladen..."><div style={{ width: "100%", minHeight: "100px", height: "100%", background: "white" }} /></Spin>}
+                <Spin tip="wird geladen...">
+                  <div
+                    style={{
+                      width: "100%",
+                      minHeight: "100px",
+                      height: "100%",
+                      background: "white"
+                    }}
+                  />
+                </Spin>}
             </div>}
         </Motion>
       </div>

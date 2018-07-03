@@ -4,6 +4,8 @@
   "private": true,
   "dependencies": {
     "antd": "^3.6.1",
+    "draftjs-to-html": "^0.8.4",
+    "html-to-draftjs": "^1.4.0",
     "lodash": "^4.17.10",
     "material-icons-react": "^1.0.0",
     "prop-types": "^15.6.1",
